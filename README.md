@@ -90,3 +90,7 @@ Total time : 1,77 m - Iteration time : 50,52 s - Profondeur : 27 - Nombre path :
 ```
 
 En générale la mémoire explose au alentoure des 20 millions de chemin à parcourir, l'alogithme est donc très dépendant des chemins possibles.
+
+## Amélioration possible
+- Passer par le disque plutôt que par la RAM pour pouvoir allez plus loin
+- Parser le labyrinthe plutôt que de calculer à la amin tout les chemins
