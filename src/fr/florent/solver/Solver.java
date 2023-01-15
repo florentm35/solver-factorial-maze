@@ -27,13 +27,13 @@ public class Solver {
 
         // Traitement
         Path terminal = null;
-        while (terminal == null) {
+        while (true) {
             List<Path> tmp = new ArrayList<>();
             for (Path path : lstPath) {
                 if (path.isTerminal()) {
                     // Solution trouvée on sort
                     terminal = path;
-                    break;
+                    System.out.println(terminal);
                 } else {
                     // On creer tout les sous chemins
                     Point lastPoint = path.getLastPoint().getPoint();
@@ -60,7 +60,7 @@ public class Solver {
         }
 
         // On affiche la 1ère solution
-        System.out.println(terminal);
+        //System.out.println(terminal);
 
     }
 

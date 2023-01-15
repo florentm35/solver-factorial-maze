@@ -3,6 +3,8 @@ package fr.florent.solver;
 import fr.florent.solver.data.Data;
 import fr.florent.solver.modele.Path;
 import fr.florent.solver.modele.Point;
+import fr.florent.solver.modele.disk.PathFileWriter;
+import fr.florent.solver.modele.disk.PathFileReader;
 
 public class Test {
     private static Data data = null;
@@ -38,7 +40,20 @@ public class Test {
         testPath = addPointAndVerify(testPath, Point.of("5"));
         //testPath = addPointAndVerify(testPath, Point.of("1"));
 
+        System.out.println(testPath.toString());
+
         System.out.println("Is terminal : " + testPath.isTerminal());
+
+        PathFileWriter pathFileWriter = new PathFileWriter();
+        pathFileWriter.addPath(testPath);
+        pathFileWriter.writePath();
+
+        try(PathFileReader reader = new PathFileReader(pathFileWriter)) {
+            for (Path path : reader) {
+                System.out.println(path.toString());
+                System.out.println("Is terminal : " + path.isTerminal());
+            }
+        }
     }
 
     private static Path addPointAndVerify(Path path, Point point) {
@@ -47,7 +62,6 @@ public class Test {
         } else {
             path = path.addPoint(data.getPoint(point));
         }
-        System.out.println(path.toString());
         return path;
     }
 }

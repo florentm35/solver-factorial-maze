@@ -9,7 +9,7 @@ import java.util.stream.Collectors;
 
 public class Path {
 
-    private Path(PointReport lastPoint, List<PointReport> lstPoint, Stack<String> letter) {
+    public Path(PointReport lastPoint, List<PointReport> lstPoint, Stack<String> letter) {
         this.lastPoint = lastPoint;
         this.lstPoint = lstPoint;
         this.letter = letter;
