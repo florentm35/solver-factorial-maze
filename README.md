@@ -104,5 +104,15 @@ En générale la mémoire explose au alentoure des 20 millions de chemin à parc
 
 Pour cette implémentation là, le monitoring est un peu plus compliqué, la profondeur correspond au 1er traitement d'une ligne de la profondeur indiqué, donc potentielement la profondeur précédante n'est pas terminé (les segment sont calculé dans l'ordre de leur création) donc à partir de la profondeur 26 (environs 14 millions de lignes à traiter) on peu considérer que le calcul de début est plutôt correct (Un segment fait 1 million de ligne et le traitement tourne sur 5 threads)
 
+![image](https://user-images.githubusercontent.com/31475579/212564024-01fbcf80-e8ec-4232-adc7-9d47ec3ea670.png)
+Le calcul pour une profondeur de 34 prend 40 minutes et génère pour la profondeur 35 400 segment(environ 70Go de disque), soit environ 400 millions de ligne ce qui prendrait théoriquement 40 minutes de traitement.
+
+On peu estimer avec le matériel utilisé (365Go de dispo) :
+- la profondeur 35 prendrait 80 minutes et générerais 800 millions de ligne (140Go)
+- la profondeur 36 pendrait 160 minutes et générerais environ 1,6 milliard de ligne (240Go)
+- la profondeur 37 planterais au bout d’environ 220 minutes apres avoir généré environ 2,2 milloard de ligne (355Go)
+
+Le temps final serait alors de 9,6h
+
 ## Amélioration possible
 - Parser le labyrinthe plutôt que de calculer à la main tout les chemins
