@@ -2,7 +2,9 @@
 
 ## Introduction
 
-Ce programme est là pour répondre au défis 13 du serveur discord NaN : https://discord.gg/notaname sur les labyrinthe fractal
+Ce programme est là pour répondre au défis 13 du serveur discord NaN : https://discord.gg/notaname sur les labyrinthe fractal.
+
+/!\ Le code n'est pas propre, c'est juste un petit solver fait rapidement (environs 12h de travail)
 
 ## Algorithme
 
