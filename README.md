@@ -19,7 +19,8 @@ Ensuite pour chaques path :
 - Sinon on va calculer tout les chemins possibles
 - On recommence avec les path calculer
 
-## Solution
+## Solution 
+### Cache in memory mono threading (Solver.java)
 
 La solutione st trouvé lors de la 25 itérations :
 ```
@@ -93,6 +94,15 @@ Total time : 1,77 m - Iteration time : 50,52 s - Profondeur : 27 - Nombre path :
 
 En générale la mémoire explose au alentoure des 20 millions de chemin à parcourir, l'alogithme est donc très dépendant des chemins possibles.
 
+### Cache disque mono threading (SolverDisk.java)
+
+![image](https://user-images.githubusercontent.com/31475579/212558515-03fde65e-3362-4423-9c22-e14ee94366e1.png)
+
+### Cache disque + multi threading (SolverDiskMultiThread.java)
+
+![image](https://user-images.githubusercontent.com/31475579/212558570-d33826ab-8bef-4cce-951e-ca830f46a1e7.png)
+
+Pour cette implémentation là, le monitoring est un peu plus compliqué, la profondeur correspond au 1er traitement d'une ligne de la profondeur indiqué, donc potentielement la profondeur précédante n'est pas terminé (les segment sont calculé dans l'ordre de leur création) donc à partir de la profondeur 26 (environs 14 millions de lignes à traiter) on peu considérer que le calcul de début est plutôt correct (Un segment fait 1 million de ligne et le traitement tourne sur 5 threads)
+
 ## Amélioration possible
-- Passer par le disque plutôt que par la RAM pour pouvoir allez plus loin
 - Parser le labyrinthe plutôt que de calculer à la main tout les chemins
