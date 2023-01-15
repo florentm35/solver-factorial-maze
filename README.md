@@ -92,7 +92,7 @@ Total time : 55,59 s - Iteration time : 21,99 s - Profondeur : 26 - Nombre path 
 Total time : 1,77 m - Iteration time : 50,52 s - Profondeur : 27 - Nombre path : 26957087 - memory usage : 24712 Mo
 ```
 
-En générale la mémoire explose au alentoure des 20 millions de chemin à parcourir, l'alogithme est donc très dépendant des chemins possibles.
+En générale la mémoire explose au alentoure des 27 millions de chemin à parcourir, l'alogithme est donc très dépendant des chemins possibles.
 
 ### Cache disque mono threading (SolverDisk.java)
 
