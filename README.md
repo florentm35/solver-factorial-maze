@@ -93,4 +93,4 @@ En générale la mémoire explose au alentoure des 20 millions de chemin à parc
 
 ## Amélioration possible
 - Passer par le disque plutôt que par la RAM pour pouvoir allez plus loin
-- Parser le labyrinthe plutôt que de calculer à la amin tout les chemins
+- Parser le labyrinthe plutôt que de calculer à la main tout les chemins
