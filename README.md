@@ -85,6 +85,7 @@ Total time : 16,75 s - Iteration time : 6,23 s - Profondeur : 24 - Nombre path :
 0(0),3(1),1(2),B12(1),11(2),10(3),4(4),6(5),8(6),D10(5),B7(4),C7(3),A9(2),B8(1),3(2),4(3),6(4),8(5),D10(4),B7(3),10(4),D8(3),B6(2),D4(1),A5(0)
 Total time : 33,60 s - Iteration time : 16,85 s - Profondeur : 25 - Nombre path : 7397346 - memory usage : 6830 Mo
 Total time : 55,59 s - Iteration time : 21,99 s - Profondeur : 26 - Nombre path : 14124567 - memory usage : 13631 Mo
-Total time : 1,77 m - Iteration time : 50,52 s - Profondeur : 27 - Nombre path : 26957087 - memory usage : 24712 Mo```
+Total time : 1,77 m - Iteration time : 50,52 s - Profondeur : 27 - Nombre path : 26957087 - memory usage : 24712 Mo
+```
 
 En générale la mémoire explose au alentoure des 20 millions de chemin à parcourir, l'alogithme est donc très dépendant des chemins possibles.
