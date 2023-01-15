@@ -75,7 +75,8 @@ B7 => D10 // ADBD
 D8 => 6 // AD
 B6 => 4 // A
 D4 => 5 //
-A5 => 1/12```
+A5 => 1/12
+```
 
 A noter qu'aucunne solution n'est trouvé après 28 iterations cela prend déjà 25 Go de ram qui est la limite de mon matériel, 
 il serait possible d'aller plus loins en passant par un implémentation sur disque plutôt que mémoire.
